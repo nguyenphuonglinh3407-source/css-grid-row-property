@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+    margin-top: 40px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+p {
+    color: #555;
+    font-style: italic;
+}
+
+/* Định dạng Grid chung cho cả 3 trường hợp */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px); /* Bắt buộc có 3 hàng, mỗi hàng cao 100px */
+    gap: 10px;
+    background-color: #e0e0e0; /* Nền xám để dễ thấy các vị trí trống */
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Định dạng chung cho các Ô */
+.item {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    border: 1px solid #9ab6c2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --------------------------------------
+   CÁC TRƯỜNG HỢP CỦA BÀI TẬP
+--------------------------------------- */
+
+/* Trường hợp 1: grid-row: 1 / 3 */
+.item-req1 {
+    grid-row: 1 / 3;
+    background-color: #ff9800; /* Màu cam */
+    color: white;
+}
+
+/* Trường hợp 2: grid-row: 2 / 4 */
+.item-req2 {
+    grid-row: 2 / 4;
+    background-color: #e91e63; /* Màu hồng */
+    color: white;
+}
+
+/* Trường hợp 3: grid-row: span 2 */
+.item-req3 {
+    grid-row: span 2;
+    background-color: #4caf50; /* Màu xanh lá */
+    color: white;
+}
